@@ -41,32 +41,37 @@ func getData() []Data {
 }//getData()
 
 // Function to substitite the words e.g.you to me etc.
-func substitution(input string) string {
-	// Split the input on word boundaries.
-	boundaries := regexp.MustCompile(`\b`)
-	tokens := boundaries.Split(input, -1)
-	
-	// List the reflections.
-	reflections := [][]string{
-		{`I`, `you`},
-		{`me`, `you`},
-		{`you`, `me`},
-		{`my`, `your`},
-		{`your`, `my`},
+func substitution(answer string) string {
+	reflections := map[string]string{
+		"am":       "are",
+		"was":      "were",
+		"i":        "you",
+		"i'd":      "you would",
+		"i've":     "you have",
+		"i'll":     "you will",
+		"my":       "your",
+		"are":      "am",
+		"you've":   "I have",
+		"you'll":   "I will",
+		"your":     "my",
+		"yours":    "mine",
+		"you":      "me",
+		"me":       "you",
+		"myself":   "yourself",
+		"yourself": "myself",
+		"i'm":      "you are",
 	}
-	
-	// Loop through each token, reflecting it if there's a match.
-	for i, token := range tokens {
-		for _, reflection := range reflections {
-			if matched, _ := regexp.MatchString(reflection[0], token); matched {
-				tokens[i] = reflection[1]
-				break
-			}
-		}
-	}
-	
-	// Put the tokens back together.
-	return strings.Join(tokens, ``)
+
+	words := strings.Split(answer, " ") // get slices of the words
+
+	for i, word := range words {	// loop through whole sentence
+		if val, ok := reflections[word]; ok {	// check for the word in reflection
+			words[i] = val // substitite the value
+		}//if
+	}//for
+
+	// Return substituted string
+	return strings.Join(words, " ") // join back into sentence
 }//substitution()
 
 // Function to analyse userInput and get chatbots proper response

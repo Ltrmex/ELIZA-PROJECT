@@ -21,7 +21,7 @@
             "Do you think you should be able to %s?",
             "If you could %s, what would you do?",
             "I don't know - why can't you %s?",
-            "Have you really tried?"
+            "Have you really tried to %s?"
         ]
     },
     {
@@ -59,7 +59,7 @@
         ]
     },
     {
-        "keyword": "What (.*)",
+        "keyword": "What",
         "responses": [
             "Why do you ask?",
             "How would an answer to that help you?",
@@ -67,7 +67,7 @@
         ]
     },
     {
-        "keyword": "How (.*)",
+        "keyword": "How",
         "responses": [
             "How do you suppose?",
             "Perhaps you can answer your own question.",
@@ -75,12 +75,11 @@
         ]
     },
     {
-        "keyword": "Because (.*)",
+        "keyword": "Because",
         "responses": [
             "Is that the real reason?",
             "What other reasons come to mind?",
-            "Does that reason apply to anything else?",
-            "If %s, what else must be true?"
+            "Does that reason apply to anything else?"
         ]
     },
     {
@@ -102,7 +101,7 @@
         "keyword": "I think (.*)",
         "responses": [
             "Do you doubt %s?",
-            "Do you really think so?",
+            "Do you really think so that %s?",
             "But you're not sure %s?"
         ]
     },
@@ -232,8 +231,7 @@
         "keyword": "You (.*)",
         "responses": [
             "We should be discussing you, not me.",
-            "Why do you say that about me?",
-            "Why do you care whether I %s?"
+            "Why do you say that about me?"
         ]
     },
     {
