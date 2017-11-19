@@ -1,9 +1,14 @@
 package main
 
+//Imports
 import (
-	"fmt"
+	"net/http"
 )
 
+//Main function
 func main() {
-	fmt.Println("Trial");
+	// http.Handler
+	http.Handle("/", http.FileServer(http.Dir("./static")));	// path to the static webpages
+
+	http.ListenAndServe(":8080", nil);	// localhost on port 8080
 }
