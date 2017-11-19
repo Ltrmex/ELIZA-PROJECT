@@ -1,6 +1,7 @@
 var chatLog = "";	// this variable will store previous messages
 
 function sendMessage(message){
+
 	// Get previous contents of the chatContainer
 	chatLog = $("#chatContainer").html();
 
@@ -38,6 +39,9 @@ $(function(){ //	when whole document loaded
 
 		var userMessage = $("#textbox").val();	// gets the value of user input and puts it into userMessage variable
 		$("#textbox").val("");	// empties the textbox
+
+		if(userMessage === "quit")	// check for quit	
+			$("#textbox").attr("disabled", "disabled"); // disable input
 
 		chatLog = $("#chatContainer").html();	// gets chatLog contents
 
