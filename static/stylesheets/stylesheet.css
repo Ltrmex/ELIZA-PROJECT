@@ -1,3 +1,59 @@
-body {
-	background-color: silver;
+body{
+	margin: 0;
+	background-color: gray;
+	color: white;
+	font-family: arial, sans-serif;
+}
+
+#header{
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+}
+
+#header>h1{
+	padding: 12px;
+	margin-left: 500px;
+	color: silver;
+}
+
+#chatContainer{
+	display:block;
+	background: black;
+	width: 800px;
+	height: 500px;
+	margin:30px auto 0;
+	border:1px dashed white;
+	overflow: scroll;
+	color: white;
+}
+
+#userInput{
+	margin-top: 10px;
+	margin-left: 280px;
+}
+
+textarea{
+	resize: none;
+	width: 730px;
+	background: black;
+	color: white;
+}
+
+#send{
+	font-size: 24px;
+	position: absolute;
+	border-radius: 12px;
+	background-color: black;
+	color: white;
+}
+
+.username{
+	color: red;
+	font-weight: bold;
+}
+
+.chatbot{
+	color: green;
+	font-weight: bold;
 }

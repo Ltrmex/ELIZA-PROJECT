@@ -1,13 +1,32 @@
 <html>
 	<head>
 		<title>Eliza Chatbot</title>
+		
+		<!-- Scripts -->
 		<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
 		<script type="text/javascript" src="scripts/script.js"></script>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css"/>
 	</head>
 
 <body>
-	<h1>Trial</h1>
+	<!-- Header -->
+	<div id="header">
+		<h1>ELIZA Chatbox</h1>
+	</div>
+
+	<!-- Chat box will be contained here i.e. it will include any past messages -->
+	<div id="chatContainer"></div>
+
+	<!-- User input will go here i.e. user messages to the chat bot will go here -->
+	<div id="userInput">
+		<!-- Text input will go here and also send button will be present to send messages -->
+		<textarea id="textbox" placeholder="Enter your message here..."></textarea>
+		<button id="send">Send</button>
+	</div>
   
+	<!-- Footer -->
+	<!-- I.E. might not be necessary -->
 </body>
 </html>
