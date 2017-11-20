@@ -228,7 +228,7 @@
         ]
     },
     {
-        "keyword": "You (.*)",
+        "keyword": "You",
         "responses": [
             "We should be discussing you, not me.",
             "Why do you say that about me?"
