@@ -20,14 +20,15 @@ I have chosen to store my responses data in json file as they're easier to read 
 types of data, example of that is when I use
 - `re := regexp.MustCompile(strings.ToLower(p.Keyword))`
 which makes use of the keyword which value of can be "My (.*)" or "I want (.*)" for example. 
-- NOTE: "(.*)" captures anything after it, for example consider sentence "Most of the time I want to relax"
-it captures "to relax" and then it does the substitutions to eventually join two strings and to reply 
-with 'What would you do if you got you want to relax?' or any other of the responses for that keyword.
+	- NOTE: "(.*)" captures anything after it, for example consider sentence "Most of the time I want to relax"
+	it captures "to relax" and then it does the substitutions to eventually join two strings and to reply 
+	with 'What would you do if you got you want to relax?' or any other of the responses for that keyword.
 
 To make things easier for myself I have chosen to go with easy kind of dark design for the web app which is pleasant to the eye, and
 also easy for user to understand. At the first glace user is present with message from Eliza in a chat window and textbox is 
 present just under the chat window, with send button on the right side of it, also
-- NOTE: "Messages can be sent by just pressing enter after typing the message in textbox"
+- NOTE: "Messages can be sent by just pressing enter after typing the message in textbox".
+
  This eye pleasing but simple design was the obvious choice for the chat bot. I was guided by the quote
 - "A user interface is like a joke. If you have to explain it, it's not that good.".
 
